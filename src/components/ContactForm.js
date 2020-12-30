@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 const ContactForm = (props) => {
     const innitalFieldsValues = {
@@ -88,6 +89,11 @@ const ContactForm = (props) => {
                 <input className="btn btn-primary" type="submit" value={props.currentId===''?'Salvar':'Atualizar'}/>
             </div>
         </form>);
+}
+
+ContactForm.propTypes = {
+    currentId: PropTypes.string.isRequired,
+    contactObject: PropTypes.object.isRequired
 }
 
 export default ContactForm;

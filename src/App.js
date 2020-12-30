@@ -20,10 +20,9 @@ function App() {
           <PrivateRoute exact path="/" component={Dashboard} />
           <Route path="/signup" component={Signup} />
           <Route path="/login" component={Login} />
-          <PrivateRoute path="/contacts" component={Contacts} />
+          <Route path="/contacts" component={Contacts} />
           <PrivateRoute path="/update-profile" component={EditProfile} />
           <Route path="/forgot-password" component={ForgotPassword} />
-
         </Switch>
         </AuthProvider>
         </Router>
